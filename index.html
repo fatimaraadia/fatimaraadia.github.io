@@ -7,39 +7,62 @@
   <title>Fatima Raadia - Tech Enthusiast</title>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <style>
-    /* Particles container full screen */
+    /* Full-screen particle container */
     #particles-js {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100vh; /* Full viewport height */
-      z-index: -1; /* Ensure it stays in the background */
+      z-index: -1; /* Keep particles behind content */
     }
 
-    /* Background color of the page */
+    /* Body background and font */
     body {
       font-family: Arial, sans-serif;
       color: #fff;
       margin: 0;
       padding: 0;
-      background-color: #111; /* Dark background for contrast */
+      background-color: #111; /* Dark background */
     }
 
     header {
       position: relative;
       z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       text-align: center;
-      padding-top: 100px;
+      padding-top: 120px;
     }
 
+    /* Profile picture styling */
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%; /* Circular image */
+      border: 4px solid #fff; /* White border around the image */
+      margin-bottom: 20px;
+    }
+
+    /* Name and contact details */
     h1 {
       color: white;
-      font-size: 3em;
+      font-size: 2.5em;
+      margin-bottom: 10px;
     }
 
     p {
       color: #f0f0f0;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+
+    /* Link styling */
+    a {
+      color: #1E3A8A; /* Dark blue */
+      text-decoration: none;
     }
 
     /* Apply the transition effect to canvas for smooth animation */
@@ -62,65 +85,30 @@
 
   <!-- Main Content -->
   <header>
+    <!-- Profile Image -->
+    <img src="profile-pic.jpg" alt="Fatima Raadia" class="profile-img">
+
+    <!-- Name and Contact Info -->
     <h1>Fatima Raadia</h1>
     <p>PhD Researcher in Computer Science | Software Engineer</p>
+    <p>Michigan, USA</p>
+    <p>
+      +1-(313) 848-6786
+      <span>·</span>
+      <a href="mailto:fatimaraadia14@gmail.com">fatimaraadia14@gmail.com</a>
+      <span>·</span>
+      <a href="https://www.linkedin.com/in/fatima-raadia/">LinkedIn</a>
+    </p>
+
+    <!-- Short Bio -->
+    <section>
+      <p><strong>Summary:</strong></p>
+      <p>Computer Science PhD researcher and Software Engineer with hands-on experience in ADAS, Real-time Embedded Systems, and algorithm development. Proficient in C++, Python, and MQTT (mosquitto) for designing real-time communication systems, camera streaming, and data visualization. Experienced in networked systems, software optimization, security protocols, and collaborative problem-solving to deliver innovative, performance-driven solutions.</p>
+    </section>
   </header>
 
-  <script>
-    // Initialize particles.js with continuous animation and smooth transitions
-    particlesJS("particles-js", {
-      particles: {
-        number: {
-          value: 200, // Number of particles
-          density: {
-            enable: true,
-            value_area: 800
-          }
-        },
-        color: {
-          value: "#1E3A8A" // Dark blue particles
-        },
-        shape: {
-          type: "circle" // Particle shape
-        },
-        opacity: {
-          value: 0.5, // Opacity of particles
-          random: true,
-          anim: {
-            enable: true,
-            speed: 1,
-            opacity_min: 0.1
-          }
-        },
-        size: {
-          value: 3, // Particle size
-          random: true,
-          anim: {
-            enable: true,
-            speed: 20,
-            size_min: 0.1
-          }
-        },
-        move: {
-          enable: true,
-          speed: 2, // Speed of particle movement
-          direction: "none", // Particles move in random directions
-          random: true,
-          straight: false,
-          out_mode: "bounce", // Bounce back instead of disappearing
-          bounce: true
-        }
-      },
-      interactivity: {
-        events: {
-          onhover: {
-            enable: true,
-            mode: "repulse" // Particles move away when hovered over
-          }
-        }
-      },
-      retina_detect: true // Retina display support
-    });
-  </script>
+  <!-- Link to external JavaScript file for particles configuration -->
+  <script src="particles-config.js"></script>
+
 </body>
 </html>
