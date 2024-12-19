@@ -16,13 +16,20 @@
     <!-- Main content -->
     <div class="content">
         <header>
-            <h1>Fatima Raadia</h1>
-            <p>Michigan, USA</p>
-            <p>+1-(313) 848-6786</p>
-            <p>
-                <a href="mailto:fatimaraadia14@gmail.com">fatimaraadia14@gmail.com</a> &bull; 
-                <a href="https://www.linkedin.com/in/fatima-raadia/">LinkedIn:/fatima-raadia</a> &bull; Michigan, USA
-            </p>
+            <div class="profile-container">
+                <!-- Profile picture -->
+                <img src="propic.png" alt="Fatima Raadia" class="profile-pic">
+                <!-- Name and contact info -->
+                <div class="info">
+                    <h1>Fatima Raadia</h1>
+                    <p>Michigan, USA</p>
+                    <p>+1-(313) 848-6786</p>
+                    <p>
+                        <a href="mailto:fatimaraadia14@gmail.com">fatimaraadia14@gmail.com</a> &bull; 
+                        <a href="https://www.linkedin.com/in/fatima-raadia/">LinkedIn:/fatima-raadia</a> &bull; Michigan, USA
+                    </p>
+                </div>
+            </div>
         </header>
 
         <section class="summary">
@@ -49,21 +56,18 @@
                     }
                 },
                 "color": {
-                    "value": "#000000"
+                    "value": "#ffffff"  /* Lighter particles */
                 },
                 "shape": {
                     "type": "circle",
                     "stroke": {
                         "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
+                        "color": "#ffffff"  /* White border for particles */
                     }
                 },
                 "opacity": {
                     "value": 0.5,
-                    "random": false,
+                    "random": true,
                     "anim": {
                         "enable": false,
                         "speed": 1,
