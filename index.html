@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <meta name="description" content="Personal website of Fatima Raadia, PhD researcher and Software Engineer.">
     <title>Fatima Raadia Portfolio Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -23,6 +24,8 @@
         </div>
     </header>
 
+    <div id="particles-js"></div>
+
     <section class="summary">
         <div class="container">
             <h2>About Me</h2>
@@ -37,5 +40,52 @@
             <p>&copy; 2024 Fatima Raadia. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+  particlesJS("particles-js", {
+    particles: {
+      number: {
+        value: 100, // Number of particles
+        density: {
+          enable: true,
+          value_area: 800
+        }
+      },
+      color: {
+        value: "#1E3A8A" // Dark blue color (can change to any other color)
+      },
+      shape: {
+        type: "circle" // Particle shape
+      },
+      opacity: {
+        value: 0.5, // Particle opacity
+        random: true,
+        anim: {
+          enable: true,
+          speed: 1,
+          opacity_min: 0.1
+        }
+      },
+      size: {
+        value: 3, // Particle size
+        random: true,
+        anim: {
+          enable: true,
+          speed: 20,
+          size_min: 0.1
+        }
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none", // Particles move in random directions
+        random: true,
+        straight: false,
+        out_mode: "out" // Particles disappear when they move out of the screen
+      }
+    },
+    retina_detect: true // Detect retina displays and scale accordingly
+  });
+</script>
+
 </body>
 </html>
