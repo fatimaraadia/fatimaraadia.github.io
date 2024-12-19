@@ -1,73 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal website of Fatima Raadia, PhD researcher and Software Engineer.">
-  <title>Fatima Raadia - Tech Enthusiast</title>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <style>
-    /* Particles container full screen */
-    #particles-js {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh; /* Full viewport height */
-      z-index: -1; /* Ensure it stays in the background */
-    }
-
-    /* Background color of the page */
-    body {
-      font-family: Arial, sans-serif;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      background-color: #111; /* Dark background for contrast */
-    }
-
-    header {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding-top: 100px;
-    }
-
-    h1 {
-      color: white;
-      font-size: 3em;
-    }
-
-    p {
-      color: #f0f0f0;
-    }
-
-    /* Apply the transition effect to canvas for smooth animation */
-    #particles-js canvas {
-      display: block;
-      vertical-align: bottom;
-      -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-      transform: scale(1);
-      opacity: 1;
-      -webkit-transition: opacity 0.8s ease, transform 1.4s ease;
-      transition: opacity 0.8s ease, transform 1.4s ease;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatima Raadia - Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Particle.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
+    <!-- Particle.js animation -->
+    <div id="particles-js"></div>
 
-  <!-- Particles.js Background -->
-  <div id="particles-js"></div>
+    <!-- Main content -->
+    <div class="content">
+        <header>
+            <h1>Fatima Raadia</h1>
+            <p>Michigan, USA</p>
+            <p>+1-(313) 848-6786</p>
+            <p>
+                <a href="mailto:fatimaraadia14@gmail.com">fatimaraadia14@gmail.com</a> &bull; 
+                <a href="https://www.linkedin.com/in/fatima-raadia/">LinkedIn:/fatima-raadia</a> &bull; Michigan, USA
+            </p>
+        </header>
 
-  <!-- Main Content -->
-  <header>
-    <h1>Fatima Raadia</h1>
-    <p>PhD Researcher in Computer Science | Software Engineer</p>
-  </header>
+        <section class="summary">
+            <h2>Summary</h2>
+            <p>
+                Computer Science PhD researcher and Software Engineer with hands-on experience in ADAS, 
+                Real-time Embedded Systems, and algorithm development. Proficient in C++, Python, and MQTT (mosquitto) 
+                for designing real-time communication systems, camera streaming, and data visualization. 
+                Experienced in networked systems, software optimization, security protocols, and collaborative problem-solving 
+                to deliver innovative, performance-driven solutions.
+            </p>
+        </section>
+    </div>
 
-  <!-- Link to the external JavaScript file -->
-  <script src="particles-config.js"></script>
+    <!-- Particle.js script -->
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#000000"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "window",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </body>
 </html>
-
