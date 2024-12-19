@@ -40,52 +40,62 @@
             <p>&copy; 2024 Fatima Raadia. All rights reserved.</p>
         </div>
     </footer>
-    <script>
+<script>
   particlesJS("particles-js", {
     particles: {
       number: {
-        value: 100, // Number of particles
+        value: 100,  <!-- Number of particles -->
         density: {
           enable: true,
-          value_area: 800
+          value_area: 800  <!-- Area covered by particles -->
         }
       },
       color: {
-        value: "#1E3A8A" // Dark blue color (can change to any other color)
+        value: "#1E3A8A"  <!-- Dark blue color -->
       },
       shape: {
-        type: "circle" // Particle shape
+        type: "circle"  <!-- Shape of the particles -->
       },
       opacity: {
-        value: 0.5, // Particle opacity
+        value: 0.5,  <!-- Opacity of the particles -->
         random: true,
         anim: {
           enable: true,
-          speed: 1,
-          opacity_min: 0.1
+          speed: 1,  <!-- Speed of opacity change -->
+          opacity_min: 0.1  <!-- Minimum opacity -->
         }
       },
       size: {
-        value: 3, // Particle size
+        value: 4,  <!-- Particle size -->
         random: true,
         anim: {
           enable: true,
-          speed: 20,
-          size_min: 0.1
+          speed: 20,  <!-- Size animation speed -->
+          size_min: 0.1  <!-- Minimum particle size -->
         }
       },
       move: {
         enable: true,
-        speed: 2,
-        direction: "none", // Particles move in random directions
+        speed: 3,  <!-- Speed of particle movement -->
+        direction: "none",  <!-- Random directions -->
         random: true,
-        straight: false,
-        //out_mode: "out" // Particles disappear when they move out of the screen
+        straight: false,  <!-- No straight movement -->
+        out_mode: "bounce",  <!-- Particles bounce back instead of disappearing -->
+        bounce: true  <!-- Ensures particles bounce within the screen -->
       }
     },
-    retina_detect: true // Detect retina displays and scale accordingly
+    interactivity: {
+      events: {
+        onhover: {
+          enable: true,
+          mode: "repulse"  <!-- Repel particles when hovering -->
+        }
+      }
+    },
+    retina_detect: true  <!-- Supports high resolution screens -->
   });
 </script>
+
 
 </body>
 </html>
