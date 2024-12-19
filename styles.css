@@ -16,13 +16,13 @@ body {
 
 /* Make the profile picture a circle and position it in the left corner */
 .profile-pic {
-    width: 80px; /* Adjust size as needed */
-    height: 80px; /* Same as width to make it a perfect circle */
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Same as width to make it a perfect circle */
     border-radius: 50%; /* This makes the image circular */
     object-fit: cover; /* Ensures the image fits the circle without distortion */
     position: absolute; /* Positioning it outside normal flow */
     top: 20px; /* Distance from top */
-    left: 20px; /* Distance from the left edge */
+    left: 30px; /* Distance from the left edge */
 }
 
 header .container {
