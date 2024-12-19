@@ -1,101 +1,126 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <meta name="description" content="Personal website of Fatima Raadia, PhD researcher and Software Engineer.">
-    <title>Fatima Raadia Portfolio Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal website of Fatima Raadia, PhD researcher and Software Engineer.">
+  <title>Fatima Raadia - Tech Enthusiast</title>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <style>
+    /* Particles container full screen */
+    #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh; /* Full viewport height */
+      z-index: -1; /* Ensure it stays in the background */
+    }
+
+    /* Background color of the page */
+    body {
+      font-family: Arial, sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      background-color: #111; /* Dark background for contrast */
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      color: white;
+      font-size: 3em;
+    }
+
+    p {
+      color: #f0f0f0;
+    }
+
+    /* Apply the transition effect to canvas for smooth animation */
+    #particles-js canvas {
+      display: block;
+      vertical-align: bottom;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+      -webkit-transition: opacity 0.8s ease, transform 1.4s ease;
+      transition: opacity 0.8s ease, transform 1.4s ease;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Fatima Raadia</h1>
-            <img src="propic.jpg" alt="Fatima Raadia" class="profile-pic">
-            <p>PhD Researcher in Computer Science | Software Engineer</p>
-            <div class="contact-info">
-                <p>Michigan, USA | +1-(313) 848-6786</p>
-                <p>Email: <a href="mailto:fatimaraadia14@gmail.com">fatimaraadia14@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/fatima-raadia/" target="_blank">linkedin.com/in/fatima-raadia</a></p>
-            </div>
-        </div>
-    </header>
 
-    <div id="particles-js"></div>
+  <!-- Particles.js Background -->
+  <div id="particles-js"></div>
 
-    <section class="summary">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>
-                Computer Science PhD researcher and Software Engineer with hands-on experience in ADAS, Real-time Embedded Systems, and algorithm development. Proficient in C++, Python, and MQTT (mosquitto) for designing real-time communication systems, camera streaming, and data visualization. Experienced in networked systems, software optimization, security protocols, and collaborative problem-solving to deliver innovative, performance-driven solutions.
-            </p>
-        </div>
-    </section>
+  <!-- Main Content -->
+  <header>
+    <h1>Fatima Raadia</h1>
+    <p>PhD Researcher in Computer Science | Software Engineer</p>
+  </header>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Fatima Raadia. All rights reserved.</p>
-        </div>
-    </footer>
-<script>
-  particlesJS("particles-js", {
-    particles: {
-      number: {
-        value: 100,  <!-- Number of particles -->
-        density: {
+  <script>
+    // Initialize particles.js with continuous animation and smooth transitions
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 200, // Number of particles
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: "#1E3A8A" // Dark blue particles
+        },
+        shape: {
+          type: "circle" // Particle shape
+        },
+        opacity: {
+          value: 0.5, // Opacity of particles
+          random: true,
+          anim: {
+            enable: true,
+            speed: 1,
+            opacity_min: 0.1
+          }
+        },
+        size: {
+          value: 3, // Particle size
+          random: true,
+          anim: {
+            enable: true,
+            speed: 20,
+            size_min: 0.1
+          }
+        },
+        move: {
           enable: true,
-          value_area: 800  <!-- Area covered by particles -->
+          speed: 2, // Speed of particle movement
+          direction: "none", // Particles move in random directions
+          random: true,
+          straight: false,
+          out_mode: "bounce", // Bounce back instead of disappearing
+          bounce: true
         }
       },
-      color: {
-        value: "#1E3A8A"  <!-- Dark blue color -->
-      },
-      shape: {
-        type: "circle"  <!-- Shape of the particles -->
-      },
-      opacity: {
-        value: 0.5,  <!-- Opacity of the particles -->
-        random: true,
-        anim: {
-          enable: true,
-          speed: 1,  <!-- Speed of opacity change -->
-          opacity_min: 0.1  <!-- Minimum opacity -->
+      interactivity: {
+        events: {
+          onhover: {
+            enable: true,
+            mode: "repulse" // Particles move away when hovered over
+          }
         }
       },
-      size: {
-        value: 4,  <!-- Particle size -->
-        random: true,
-        anim: {
-          enable: true,
-          speed: 20,  <!-- Size animation speed -->
-          size_min: 0.1  <!-- Minimum particle size -->
-        }
-      },
-      move: {
-        enable: true,
-        speed: 3,  <!-- Speed of particle movement -->
-        direction: "none",  <!-- Random directions -->
-        random: true,
-        straight: false,  <!-- No straight movement -->
-        out_mode: "bounce",  <!-- Particles bounce back instead of disappearing -->
-        bounce: true  <!-- Ensures particles bounce within the screen -->
-      }
-    },
-    interactivity: {
-      events: {
-        onhover: {
-          enable: true,
-          mode: "repulse"  <!-- Repel particles when hovering -->
-        }
-      }
-    },
-    retina_detect: true  <!-- Supports high resolution screens -->
-  });
-</script>
-
-
+      retina_detect: true // Retina display support
+    });
+  </script>
 </body>
 </html>
